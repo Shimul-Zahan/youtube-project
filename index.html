@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .active{
+            background-color: red;
+            color: white;    
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto">
+        <div class="navbar bg-base-100 p-8">
+            <div class="navbar-start">
+                <img src="./Logo.png" alt="">
+            </div>
+            <div class="navbar-center">
+                <a class="btn">Sort by view</a>
+            </div>
+            <div class="navbar-end">
+                <button class="btn btn-secondary">Hello</button>
+            </div>
+        </div>
+
+        <hr class="">
+
+        <!-- tab part -->
+        <div id="catagories" class="flex justify-center items-center gap-4 mt-8">
+            
+        </div>
+
+        <!-- card part -->
+        <div class="flex justify-center items-center">
+            <div id="songDiv" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center items-center gap-8 space-y-8">
+                <!-- ! add item dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/app.js"></script>
+</body>
+</html>
