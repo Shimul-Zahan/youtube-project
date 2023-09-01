@@ -16,7 +16,7 @@ const displayCategories = (categories) => {
         const div = document.createElement('div');
         div.classList = `tabs`;
         div.innerHTML = `
-            <button id="bttn" onclick="indivusalCategoryShow('${catagory.category_id}', this);" class="btn bg-gray-200 focus:bg-red-600 active:bg-red-700 focus:outline-none ">${catagory.category}</button>
+            <button id="bttn" onclick="indivusalCategoryShow('${catagory.category_id}', this);" class="btn bg-gray-300 font-medium text-base text-black focus:bg-red-600 active:bg-red-700 focus:outline-none ">${catagory.category}</button>
         `
         catagoriesDiv.appendChild(div);
     });
@@ -57,7 +57,7 @@ const displaySong = (data) => {
                 <div class="relative">
                     <img class="rounded-lg w-[350px] h-[200px]" class="rounded-lg" src="${itemSong.thumbnail ? itemSong.thumbnail : 'no image found'}" />
                     <div class="absolute right-0 bottom-0 text-white mr-2 mb-2 p-1">       
-                        <p class="bg-black rounded-sm">${itemSong.others.posted_date ? hours + 'hours ' + minutes + 'minutes ago' : ''
+                        <p class="bg-black rounded-sm">${itemSong.others.posted_date ? hours + 'hrs ' + minutes + 'mins ago' : ''
                 } </p>
                     </div>
                 </div>

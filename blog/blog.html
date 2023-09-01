@@ -3,9 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Blog Site</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    Welcome
+    <div class=" container mx-auto text-center bg-green-600 p-8 mt-4">
+        <h1 class="text-center text-5xl font-bold">Here are some educational blogs here. <br> You can see example toggle or click the see more button.</h1>
+    </div>
+    <div id="parent-div" class=" container mx-auto flex flex-col justify-center items-center mt-8 my-4">
+        <!-- ! add dynamic categories -->
+        <div class="w-full text-center space-y-2 mb-8  bg-green-300 p-8 mt-2 text-black rounded-xl">
+            <h1 class="text-4xl font-medium text-yellow-500">Var</h1>
+            <p class="py-2 text-xl font-medium">
+                Scope basically refer to a place where varibale are workabel.When a var variable is declared outside of a function, the scope is global. This means that any variable declared outside of a function block using the var keyword is accessible throughout the entire window.When a variable is declared inside a function, it has function scope. This indicates that it is accessible and limited to that function.
+            </p>
+            <button onclick="seeExample(this)" class="btn btn-outline btn-danger">See Example</button>
+            <div class="flex justify-between items-center bg-black hidden rounded-xl">
+                <img src="./images/block-scope.png" alt="">
+                <img src="./images/redeclare-var.png" alt="">
+            </div>
+        </div>
+
+        <div class="w-full text-center space-y-2 mb-8  bg-green-300 p-8 mt-2 text-black rounded-xl">
+            <h1 class="text-4xl font-medium text-yellow-500">Constant</h1>
+            <p class="py-2 text-xl font-medium">
+                We can use constant variable as in a scope. It is also immutable within a scope. We can use a constant variable for only declare a not re assigned value.
+                <br> The scope is a scope is a constant variable is <strong>Block scope.</strong><br> it can not be declare without initialization.
+                <strong>It can not be update or re-declare.</strong> 
+                <br>
+                It cannot be accessed without initialization, as it cannot be declared without initialization
+            </p>
+            <button onclick="seeExample(this)" class="btn btn-outline btn-danger">See Example</button>
+            <div class="flex flex-col gap-4 justify-between items-center bg-black hidden rounded-xl">
+                <img src="./images/const-scope.png" alt="">
+                <img src="./images/const-update.png" alt="">
+                <img src="./images/re-declare-const.png" alt="">
+            </div>
+        </div>
+
+        <div class="w-full text-center space-y-2 mb-8  bg-green-300 p-8 mt-2 text-black rounded-xl">
+            <h1 class="text-4xl font-medium text-yellow-500">Let</h1>
+            <p class="py-2 text-xl font-medium">
+                We can use a let variable in a scope. But like var let is immutable within its scope. We can not reassign the let varibale but we can use it for for same variable multiple value assign. Let variable can not work out of its scope. <strong>We can update let variable but can not reassign it</strong>. <br>Var variable scope is <strong>block scope</strong>. It can be declare with out declaration.
+            </p>
+            <button onclick="seeExample(this)" class="btn btn-outline btn-danger">See Example</button>
+            <div class="flex flex-col gap-4 justify-between items-center bg-black hidden rounded-xl">
+                <img src="./images/re-declare-let.png" alt="">
+                <img src="./images/update-let.png" alt="">
+                <img src="./images/hoisting.png" alt="">
+            </div>
+        </div>
+
+        <div class="w-full text-center space-y-2 mb-8  bg-green-300 p-8 mt-2 text-black rounded-xl">
+            <h1 class="text-4xl font-medium text-yellow-500">Null</h1>
+            <p class="py-2 text-xl font-medium">
+                It is the absence of value. It is the one kind of premptive value. <br>
+                null == undefined;
+                <br>
+                null !=== undefined;
+                <br>
+                Null is a kind of Object.Null is an assignment value. It can be assigned to a variable as a representation of no value.<br>Its syntax is -: null
+            </p>
+            <button onclick="seeExample(this)" class="btn btn-outline btn-danger">See Example</button>
+            <div class="flex flex-col gap-4 justify-between items-center bg-black hidden rounded-xl">
+                <img src="./images/null.png" alt="">
+                <img src="./images/null-2.png" alt="">
+            </div>
+        </div>
+
+        <div class="w-full text-center space-y-2 mb-8 bg-green-300 p-8 mt-2 text-black rounded-xl">
+            <h1 class="text-4xl font-medium text-yellow-500">Undefined</h1>
+            <p class="py-2 text-xl font-medium">
+                When variable is not assigned a value. It means the value does not exist in the compiler. It is the global
+                object.Undefined means a variable has been declared but has yet not been assigned a value.It is a global property.It is not an assignment value. It means a variable has been declared but has not yet been assigned a value.The undefined value is a primitive value, which is used when a variable has not been assigned a value.
+            </p>
+            <button onclick="seeExample(this)" class="btn btn-outline btn-danger">See Example</button>
+            <div class="flex flex-col gap-4 justify-between items-center bg-black hidden rounded-xl">
+                <img src="./images/undefined.png" alt="">
+                <img src="./images/nul-unde.png" alt="">
+            </div>
+        </div>
+
+        <div class="w-full text-center space-y-2 mb-8 bg-green-300 p-8 mt-2 text-black rounded-xl">
+            <h1 class="text-4xl font-medium text-yellow-500">REST API</h1>
+            <p class="py-2 text-xl font-medium">
+                Representational State Transfer (REST) is an architectural style that defines a set of constraints to be used for creating web services. REST API is a way of accessing web services in a simple and flexible way without having any processing.
+                <br>
+                <strong>Working</strong>: A request is sent from client to server in the form of a web URL as HTTP GET or POST or PUT or DELETE request. After that, a response comes back from the server in the form of a resource which can be anything like HTML, XML, Image, or JSON. But now JSON is the most popular format being used in Web Services.
+            </p>
+            <button onclick="seeExample(this)" class="btn btn-outline btn-danger">See Example</button>
+            <div class="flex flex-col gap-4 justify-between items-center bg-black hidden rounded-xl">
+                <img src="./images/restAPI.png" alt="">
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function seeExample(e){
+            e.parentElement.childNodes[6].nextSibling.classList.toggle('hidden');
+        }
+    </script>
 </body>
 </html>
