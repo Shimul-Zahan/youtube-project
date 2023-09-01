@@ -14,16 +14,16 @@
     </style>
 </head>
 <body>
-    <div class="container mx-auto">
+    <div class="container mx-auto mb-20">
         <div class="navbar bg-base-100 p-8">
             <div class="navbar-start">
                 <img src="./Logo.png" alt="">
             </div>
             <div class="navbar-center">
-                <a class="btn">Sort by view</a>
+                <a onclick="sortByView()" class="btn">Sort by view</a>
             </div>
             <div class="navbar-end">
-                <button class="btn btn-secondary">Hello</button>
+                <a href="./blog/blog.html"><button class="btn btn-secondary">Hello</button></a>
             </div>
         </div>
 
@@ -39,6 +39,10 @@
             <div id="songDiv" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center items-center gap-8 space-y-8">
                 <!-- ! add item dynamically -->
             </div>
+        </div>
+
+        <div id="notFoundImage" class="flex justify-center items-center">
+
         </div>
     </div>
 
